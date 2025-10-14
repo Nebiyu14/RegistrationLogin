@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
 const bcrypt = require("bcrypt");
@@ -10,7 +11,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
-    secret: "mySecretKey",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
   })
@@ -18,10 +19,10 @@ app.use(
 
 // connect to the database
 const database = mysql.createConnection({
-  host: "localhost",
-  user: "neba",
-  password: "neba",
-  database: "registerationform",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.db_PASSWORD,
+  database: process.env.DB_NAME
 });
 database.connect();
 
@@ -80,14 +81,14 @@ app.get("/me", (req, res) => {
 });
 
 //routing: logout
-app.get("/logout", (req, res)=>{
-  req.session.destroy(()=>{
-    return res.send("Logged out!")
-  })
-})
+app.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    return res.send("Logged out!");
+  });
+});
 
 //connect to the port
-const PORT = 5002;
+const PORT = process.env.PORT || 5002;
 app.listen(PORT, (error) => {
   if (error) {
     console.log("Can't connect to server", error);
