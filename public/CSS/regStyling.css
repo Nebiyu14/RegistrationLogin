@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+}
+
+body {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, sans-serif, Georgia, Times, serif;
+  font-size: 20px;
+  background-image: url(../images/unv.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  background: transparent;
+  backdrop-filter: blur(4px);
+  color: white;
+  margin-top: 20px;
+  width: 50%;
+  height: 400px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px hsl(0, 38%, 3%);
+}
+
+.header {
+  background-color: rgb(31, 10, 31);
+  width: 100%;
+  max-height: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header ul li {
+  list-style: none;
+  transform: translateY(50%);
+  color: white;
+  font-size: 1.2em;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+.header ul li:hover {
+  color: yellow;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 60%;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.boxBorder {
+  outline: none;
+  border: 2px solid hsl(10, 83%, 49%);
+  box-shadow: 0px 0px 10px hsl(351, 81%, 40%);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid hsl(271, 76%, 70%);
+  box-shadow: 0px 0px 10px hsl(271, 76%, 70%);
+}
+
+#registerBtn {
+  font-weight: bolder;
+  padding: 5px 10px;
+  background-color: hsl(240, 65%, 54%);
+  border: none;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#registerBtn:hover {
+  color: white;
+  /* background-color: green; */
+}
+
+#registerBtn:active {
+  color: red;
+  background-color: green;
+  transform: scale(0.85);
+  transition: 0.1s ease-in-out;
+}
+
+#message {
+  font-size: 20px;
+}

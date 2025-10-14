@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      body {
+        display: flex;
+        flex-direction: column;
+        /* width: 100vw; */
+      }
+      video {
+        width: 600px;
+        width: "80%";
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 10px auto;
+      }
+      .btn {
+        width: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 0 auto;
+      }
+      .btn button{
+        color: green;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Live Camera Preview</h1>
+    <video id="camera" playsinline autoplay></video>
+    <div class="btn">
+      <button id="startBtn">Start Camera</button>
+      <button id="stopBtn">Stop Camera</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

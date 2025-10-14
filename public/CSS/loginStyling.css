@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: hsla(0, 3%, 22%, 0.756);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: url(../images/st3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  background-color: rgb(31, 10, 31);
+  width: 100%;
+  max-height: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header ul {
+  display: inline-flex;
+  gap: 20px;
+  list-style: none;
+  transform: translateY(25%);
+  font-size: 1.2em;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  /* box-shadow: 0 0 15px hsl(0, 0%, 100%); */
+  background-color: transparent;
+  padding-top: 20px;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+
+.container input {
+  margin: 10px 0;
+  width: 80%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  background: transparent;
+  border-color: white;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  padding-left: 30px;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputBox i {
+  position: absolute;
+  right: 50px;
+  transform: translateY(100%);
+}
+
+.container input::placeholder {
+  font-size: 0.9em;
+  font-family: inherit;
+  color: white;
+}
+
+.container input:focus {
+  outline: none;
+  border-bottom: 2px solid red;
+  box-shadow: 0 0 13px greenyellow;
+  padding-left: 30px;
+}
+
+.container .rememberMe input {
+  all: revert;
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+}
+
+.container a:hover {
+  color: rgb(191, 22, 36);
+}
+
+.container a:active {
+  font-weight: bolder;
+  text-decoration: double;
+}
+.container .rememberMe {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 80%;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+button:active {
+  font-weight: bolder;
+  font-size: 1.1em;
+  width: 81%;
+}
+
+.boxBorder {
+  outline: none;
+  border: 2px solid hsl(10, 83%, 49%);
+  box-shadow: 0px 0px 10px hsl(351, 81%, 40%);
+}
+
+#message {
+  font-size: 20px;
+  background-color: white;
+  width: 80%;
+  margin: 30px auto 0;
+  border-radius: 10px;
+
+}
