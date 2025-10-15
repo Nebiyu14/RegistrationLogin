@@ -1,0 +1,43 @@
+body {
+  background-image: url(../images/astu-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  transform: scale();
+  transform: translate(0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.697);
+  border-radius: 0 20px;
+  border: none;
+  color: white;
+  padding: 0 10px;
+}
+.content h1 {
+  color: grey;
+}
+.content ul {
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: rgb(184, 183, 212);
+}
+a:hover {
+  text-decoration: underline;
+  color: violet;
+}

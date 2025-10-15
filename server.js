@@ -22,12 +22,13 @@ const database = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.db_PASSWORD,
-  database: process.env.DB_NAME
+  database: process.env.DB_NAME,
 });
 database.connect();
 
 //routing: checking GET
 app.get("/", (req, res) => {
+  window.location.href = "index.html"
   res.send("Welcome to the registeration form - from Backend!");
 });
 
@@ -94,5 +95,5 @@ app.listen(PORT, (error) => {
     console.log("Can't connect to server", error);
     return;
   }
-  console.log("The server is running...http://localhost:5002");
+  console.log(`The server is running...http://localhost:${PORT}`);
 });
